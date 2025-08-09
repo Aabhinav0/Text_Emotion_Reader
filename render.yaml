@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: emoji-voice-generator
+    env: node
+    plan: free
+    buildCommand: |
+      apt-get update && apt-get install -y festival
+      npm install
+    startCommand: node server.js
